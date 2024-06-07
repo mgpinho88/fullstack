@@ -1,25 +1,14 @@
 # Full Stack Web Development
 ## The Web Developer Bootcamp by Colt Steele
 
-This repository is for my uploads from the Colt Steele bootcamp course. Each folder is dedicated to a section of the course beginning. This MD file is a living document and will be updated as I progress through this course, mostly giving updates to my file structures or providing summaries of each section. 
+This repository is for my uploads from the Colt Steele bootcamp course. I have divided the course into various sections as depicted by the table of content. In addition, there will be a lot of code which was downloaded directly from Colt Steele's course so not all the content is my own in this repo. For the most part any of the exercises and practices will be my own implementation but for the lecture sections they will be copy/paste code. In each section there will be a breif write-up summary of what was learned in the entirety of the section. 
 
-# Table of Content
-# HTML : The Essensials
+## Table of Content
+- [01 :: HTML](01-HTML\readme.md)
+- [02 :: CSS](#item-two)
+- [03 :: JavaScriptSecond Item](#item-three)
 
-**Table of content:**
-- [Hello World](#item-one)
-- [First Item](#item-two)
-- [Second Item](#item-three)
 
-<!-- headings -->
-<a id="item-one"></a>
-### Hello World
-Hello world content goes here
-
-<a id="item-two"></a>
-### First Item
-First item content goes here
-
-<a id="item-three"></a>
-### Second Item
-Second item content goes here
+## Useful Sites:
+ - [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/)
+ - [Markdown Guide](https://www.markdownguide.org/basic-syntax/)

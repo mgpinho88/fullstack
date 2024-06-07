@@ -1,0 +1,31 @@
+/* CSS Selectors  */
+
+/* 
+    The HTML Element we are "Targeting" are known as CSS Selectors. 
+    In the examples below our goal is to change properties of the h2, button, p, and body elements of our HTML document
+*/
+h2 {
+    /* The "color" select will change the color of the text of the target*/
+    color: #5FCFFC;
+    /* the "background-color" selector will change the background color of the target */
+    background-color: rgb(89, 151, 0);
+}
+
+button {
+    color: magenta;
+    /* CSS has predefined colors which could be found at https://147colors.com/ */
+    background-color: cyan;
+}
+
+p {
+    color: olive;
+    /* You can also use rgb(r, g, b) too */
+    background: rgb(228, 161, 37);
+}
+
+body {
+    background-color: #c5e;
+}
+
+
+
