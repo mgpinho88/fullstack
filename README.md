@@ -5,8 +5,8 @@ This repository is for my uploads from the Colt Steele bootcamp course. I have d
 
 ## Table of Content
 - [01 :: HTML](https://github.com/mgpinho88/fullstack/tree/main/01-HTML)
-- [02 :: CSS](#item-two)
-- [03 :: JavaScriptSecond Item](#item-three)
+- [02 :: CSS](https://github.com/mgpinho88/fullstack/tree/main/02-CSS)
+- [03 :: JavaScriptSecond Item](https://github.com/mgpinho88/fullstack/blob/main/03-JavaScript)
 
 
 ## Useful Sites:
