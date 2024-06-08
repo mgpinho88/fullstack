@@ -1,6 +1,11 @@
-/* * {
+/* 
+the "*" selects everything in the entire document and is not recommended to use
+* {
     background-color: cyan;
-} */
+} 
+
+Adjacent Selectors are less used 
+*/
 
 body {
     background-color: #f1faee;
@@ -48,10 +53,12 @@ footer > a {
     color: #457b9d;
 }
 
+/* Select all "input" elements with the input type equal to "password" */
 input[type="password"] {
     color: greenyellow;
 }
 
+/* Select all "a" tags where the href is equal to "google" */
 a[href*="google"]{
     color: #1d3557;
 }
@@ -66,6 +73,7 @@ a[href*="google"]{
     background-color: #02c39a;
 }
 
+/* Apply this style to every second instance of the class "post" */
 .post:nth-of-type(2n){
     background-color: #dfe8dc;
 }
