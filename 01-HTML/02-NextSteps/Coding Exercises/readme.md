@@ -1,7 +1,8 @@
-# Snowman Logo Exercise
+# Next Steps Exercises
+## 01 :: Snowman Logo Exercise
 It's time for more practice!  Please write an `<h1>` element to recreate the following image:
 
-![alt text](image.png)
+![alt text](images/snowmanlogo.png)
 
  - There is a snowman entity code.  Find it! (you will need to google it)
 

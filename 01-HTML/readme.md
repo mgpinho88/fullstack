@@ -4,5 +4,9 @@
 - 01 :: The Essentials
     - [Coding Exercises]()
 - 02 :: Next Steps
-- 03 :: Forms &    
+    - [Coding Exercises]()
+- 03 :: Forms & Tables
+    - [Coding Exercises]()
+    - [Practice : Race Registration]() 
+
     
