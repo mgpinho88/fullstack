@@ -112,6 +112,7 @@ The CSS property `transform` will "move" or "scale" the selected element. If you
 - `rotate()`
 - `skew()`
 
+Please see [MDN :: transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) documentation for more details and examples.
 You can also mix different `transform` properties together. As an example you could do:
 ```css
 (./#)element {
@@ -119,3 +120,12 @@ You can also mix different `transform` properties together. As an example you co
 }
 ```
 (Couple this with `transitions` to make interesting affects)
+
+## 06 :: Responsive CSS & Flexbox
+Display
+Direction 
+Justify ↔
+Align ↕
+Wrap
+
+## 07 :: Frameworks(Bootstrap)
