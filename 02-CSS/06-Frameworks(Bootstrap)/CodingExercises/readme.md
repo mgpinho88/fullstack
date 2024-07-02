@@ -8,5 +8,11 @@ I've given you some starter markup in index.html.  Bootstrap is already included
 - Make the first button a green bootstrap button
 - Make the second button a red bootstrap button
 
-![assignment1](images/assignment1.png)
+![assignment1](./images/assignment1.png)
 
+## 02 :: Bootstrap Grid Practice
+Please recreate the layout pictured below. I've included bootstrap for you, but you'll need to create all the relevant markup (container, row, column, etc.). I'm not testing your code for the specific colors, but I recommend giving the columns background colors so that you can differentiate them. I'm also not testing for the specific text in each column.
+
+![assignment2](./images/assignment2.png)
+
+**Please note:** Although bootstrap will allow you to use col without a column size to automatically fill the remaining space in the row (and that would normally be an acceptable solution), the tests for this exercise will not recognize that as a correct solution. So, please be sure to explicitly include the column size for each individual col-* class.
