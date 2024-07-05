@@ -1,13 +1,16 @@
-# Basics Exercises
-## 01 :: Our First Variables Exercise
-In index.js, please define TWO variables:
-* Define a variable called myLuckyNumber and set it equal to 37.
-* Define a variable called octopusLimbs and set it equal to 8.
+# Object Literals Exercises
+## 01 :: Our First Object Exercise
+It's time to practice creating your own object literal.  Please define a new variable called `product`.  It should be an object literal with the following properties:
+* `name` - set to the string `"Gummy Bears"`
+* `inStock` - set to the boolean `true`
+* `price`  - set to the number `1.99`
+* `flavors` - set to an array of at least three strings like `["grape", "apple", "cherry"]`
 
-## 02 :: Our First Constants Exercise
-Let's get some practice defining constants. In `index.js`, please define the following two variables:
-* Define a constant called `boilingPointC` and set it to `100`. 
-* Define a second constant called `boilingPointF` and set it to `212`. 
-* That's it!
-
-(technically, I can't test that you are using `const` instead of `let`...so you're on the honor system here! DO THE RIGHT THING AND USE `const`!
+## 02 :: Object Access Exercise
+In `index.js`, you'll find a `restaurant` object that contains a name, address, city, state, and zipcode. 
+* **Your task to is to create a variable named `fullAddress` that points to a string** using the information from `restaurant`. 
+* `fullAddress` should point to a string that includes the address, city, state, and zipcode from the `restaurant` object. Make sure to add any necessary commas or spaces between the values to precisely match the exact expected output format, which is shown in the example below.
+* To make it harder to "cheat" by copy and pasting, I've randomly generated the address portion. For example, if the address was "64 Johnson Ave", the `fullAddress` variable would look like this:
+```JavaScript
+"64 Johnson Ave, Brooklyn, NY 11206" // this is the expected output format of the `fullAddress` string (keep an eye on the commas and/or spaces between the values and match that too!)
+```
