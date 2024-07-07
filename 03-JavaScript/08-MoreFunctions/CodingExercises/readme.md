@@ -1,13 +1,16 @@
 # Basics Exercises
-## 01 :: Our First Variables Exercise
-In index.js, please define TWO variables:
-* Define a variable called myLuckyNumber and set it equal to 37.
-* Define a variable called octopusLimbs and set it equal to 8.
+## 01 :: Function Expression Exercise
+Define a function that returns the `square` of a number. D**efine the function as a function expression, stored in a variable called `square`.  NOTE: Udemy's coding exercise platform does NOT support the `**` operator.** 
+```JavaScript
+square(4) //16
+square(3) //9
+```
 
-## 02 :: Our First Constants Exercise
-Let's get some practice defining constants. In `index.js`, please define the following two variables:
-* Define a constant called `boilingPointC` and set it to `100`. 
-* Define a second constant called `boilingPointF` and set it to `212`. 
-* That's it!
-
-(technically, I can't test that you are using `const` instead of `let`...so you're on the honor system here! DO THE RIGHT THING AND USE `const`!
+## 02 :: Methods Exercise
+Define an object called `square`, which will hold methods that have to do with the geometry of squares. It should contain two methods, `area` and `perimeter
+* `area` should accept the length of a `side` (all sides are the same in a square) and then return the `side` squared. 
+* `perimeter` should accept the length of a `side` and return that `side` multiplied by 4.
+```JavaScript
+square.area(10) //100
+square.perimeter(10) //40
+```
