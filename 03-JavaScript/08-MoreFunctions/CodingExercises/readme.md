@@ -14,3 +14,16 @@ Define an object called `square`, which will hold methods that have to do with t
 square.area(10) //100
 square.perimeter(10) //40
 ```
+
+## 03 :: Egg Laying Exercise
+Define an object called `hen`.  It should have three properties:
+* `name` should be set to `'Helen'`
+* `eggCount` should be set to `0`
+* `layAnEgg` should be a method which increments the value of `eggCount` by 1 and returns the string "EGG".  You'll need to use `this`.
+```JavaScript
+hen.name // "Helen"
+hen.eggCount // 0
+hen.layAnEgg() // "EGG"
+hen.layAnEgg() // "EGG"
+hen.eggCount // 2
+```
