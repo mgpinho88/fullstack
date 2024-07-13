@@ -48,3 +48,13 @@ In `index.html`, you'll find 6 `<li>` elements, two of which have the `'highligh
 ![exercise07-img](./assets/exercise07-img1.png)
 
 **Please don't touch the markup in `index.html`! Do this all via JavaScript!**
+
+## 08 :: 100 Button Insanity Exercise
+Without touching `index.html`, please use JavaScript to **create exactly 100 new button elements**! Add each new button inside the container element provided in index.html. Here are the steps:
+* Create exactly 100 new button elements
+* Each button must have some text inside of it (it doesn't matter what)
+* Each button **must be appended inside the container div**.
+
+![exercise08-img1](./assets/exercise08-img1.png)
+
+**Hint**: Loop 100 times. Inside the loop, create a new empty button element.  Add some innerText to the button.  Then, append the button to the container.
