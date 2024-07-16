@@ -16,6 +16,8 @@
 14. [AJAX & APIs](https://github.com/mgpinho88/fullstack/tree/main/03-JavaScript/14-AJA&APIs)
 15. [Prototypes, Classes & OOP](https://github.com/mgpinho88/fullstack/tree/main/03-JavaScript/15-PrototypesClasses&OOP)
 
+*Project-ScoreKepper is incomplete. Please work on this on a later date after React*
+
 ## The Basics
 JavaScript comes equipt with a handful of "building blocks" known as the primitive types. These are the fundamental parts of the JavaScript language akin to the parts of an atom. The primitives include:
 * Number - unlike other computer languages there is one number type. The number primitive is a representation of a number in the language. These can be whole numbers, negative numbers and decimals.
