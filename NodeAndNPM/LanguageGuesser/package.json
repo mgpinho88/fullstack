@@ -1,0 +1,27 @@
+{
+  "name": "languageguesser",
+  "version": "1.0.0",
+  "description": "This package will attempt to guess the language typed into the CLI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgpinho88/fullstack.git"
+  },
+  "keywords": [
+    "languageGuesser"
+  ],
+  "author": "Mark Pinho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgpinho88/fullstack/issues"
+  },
+  "homepage": "https://github.com/mgpinho88/fullstack#readme",
+  "dependencies": {
+    "franc": "^6.2.0",
+    "langs": "^2.0.0"
+  }
+}
