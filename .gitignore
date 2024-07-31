@@ -7,3 +7,4 @@
 *.ppsx
 *.pdf
 unzipped/
+.vscode/
