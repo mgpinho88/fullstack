@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Making</title>
+</head>
+<body>
+    <h1>Decision Making in EJS</h1>
+    
+    <p>Making a decision using the else statement you can use the `&#60;&#37;` 'Scriptlet' tag  in your document.</p>
+    <p>For example if the random number between 1 and 10 is even then the text displayed will varry.</p>
+    <p>Random number is <em><%= rand %></em></p>
+    <!-- You can use Scriptlet with equal tag to add decision logic -->
+    <em>This text displays <%= rand % 2 === 0 ? 'even' : 'odd' %>!</em>
+    
+    <p>I hope the correct text displays for the correct result!</p>
+</body>
+</html>

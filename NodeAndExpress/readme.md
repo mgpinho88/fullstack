@@ -1,0 +1,2 @@
+# Getting started
+Node and Express are some essential tools for web developers. Node allows us to run JavaScript code outside the browser. You can use node as a build tool, package and dependency manager, and you can run apps locally. Express can be used to create servers and test your code. Please see the documentation for more information on both tool sets.
