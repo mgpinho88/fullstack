@@ -6,7 +6,5 @@
 *.ppsm
 *.ppsx
 *.pdf
-*.zip
-./node_modules
 unzipped/
 .vscode/
