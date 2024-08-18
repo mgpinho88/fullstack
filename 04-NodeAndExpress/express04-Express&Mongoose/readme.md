@@ -58,3 +58,13 @@ const Product = mongoose.model('Product', productSchema);
 module.exports = Product;
 ```
 Now that our schema is established you will want to create a file that will seed some data. In this example, we've created `seeds.js` as that file to populate MongoDB with some dummy
+
+## Step 3 :: Create the CRUD Routes
+### Create
+Writeup comming soon.
+### Update
+Writeup comming soon.
+### Read
+Writeup comming soon.
+### Delete
+Writeup comming soon.

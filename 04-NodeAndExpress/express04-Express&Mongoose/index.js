@@ -32,6 +32,19 @@ app.listen(port, () => {
 })
 
 // Test route to ensure application is running
-app.get('/test', (req, res) => {
-    res.send("<h1>Working</h1>");
+app.get('/test', async (req, res) => {
+    res.render('test');
 });
+
+app.get('/shop', async (req, res) => {
+    const products = await Product.find({});
+    products.forEach(p => console.log(p.name));
+    res.render('shop/index', { products });
+});
+
+app.get('/shop/:id', async (req, res) => {
+    const { id } = req.params;
+    console.log(id);
+    const product = await Product.findById(id);
+    res.render('shop/item', { product });
+})

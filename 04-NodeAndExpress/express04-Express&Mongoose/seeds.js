@@ -18,47 +18,47 @@ const productSeeds = [
     {
         name: "Grapefruit",
         price: 1.99,
-        type: "FRUIT"
+        category: "FRUIT"
     },
     {
         name: "Eggplant",
         price: 0.99,
-        type: "VEGETABLE"
+        category: "VEGETABLE"
     },
     {
         name: "Melon",
         price: 4.99,
-        type: "FRUIT"
+        category: "FRUIT"
     },
     {
         name: "Eggs",
         price: 8.99,
-        type: "NON-DAIRY"
+        category: "NON-DAIRY"
     },
     {
         name: "Milk",
         price: 9.99,
-        type: "DAIRY"
+        category: "DAIRY"
     },
     {
         name: "Cheddar",
         price: 3.99,
-        type: "DAIRY"
+        category: "DAIRY"
     },
     {
         name: "Tomatoe",
         price: 0.99,
-        type: "FRUIT"
+        category: "FRUIT"
     },
     {
         name: "Lettuce",
         price: 1.49,
-        type: "VEGETABLE"
+        category: "VEGETABLE"
     },
     {
         name: "Carrot",
         price: 2.29,
-        type: "VEGETABLE"
+        category: "VEGETABLE"
     }
 ]
 
