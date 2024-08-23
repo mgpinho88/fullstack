@@ -1,0 +1,25 @@
+{
+  "name": "project1-ylepcamp",
+  "version": "1.0.0",
+  "description": "Basic Express application from Colt Steele Web Developer Bootcamp",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "EJS",
+    "Mongoose",
+    "FullStack"
+  ],
+  "author": "Mark Pinho",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.5.3",
+    "url": "^0.11.4"
+  }
+}

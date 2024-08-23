@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import Categories from '../lib/consts.js'
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
@@ -14,7 +15,7 @@ const productSchema = new Schema({
     category: {
         type: String,
         uppercase: true,
-        enum: ['FRUIT', 'VEGETABLE', 'DAIRY', 'NON-DAIRY']
+        enum: Categories
     }
 })
 

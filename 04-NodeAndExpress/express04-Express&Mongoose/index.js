@@ -2,8 +2,10 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import methodOverride from 'method-override';
 import mongoose from 'mongoose';
 import Product from './models/product.js';
+import Categories from './lib/consts.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -27,6 +29,9 @@ mongoose.connect(`mongodb://127.0.0.1:27017/${applicationDB}`)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'));
+
 app.listen(port, () => {
   console.log(`App is listening on port ${port}`)
 })
@@ -36,15 +41,41 @@ app.get('/test', async (req, res) => {
     res.render('test');
 });
 
+// Render main page (Read route)
 app.get('/shop', async (req, res) => {
     const products = await Product.find({});
-    products.forEach(p => console.log(p.name));
     res.render('shop/index', { products });
 });
 
+// Create Routes
+app.get('/shop/new', (req, res) => {
+    res.render('shop/newItem', { Categories })
+})
+
+app.post('/shop', async (req, res) => {
+    const product = new Product(req.body);
+    await product.save();
+    res.redirect('/shop');
+})
+
+// Read Routes
 app.get('/shop/:id', async (req, res) => {
+    console.log("Line36:GET ", req.body)
     const { id } = req.params;
-    console.log(id);
     const product = await Product.findById(id);
     res.render('shop/item', { product });
+})
+
+// Update Routes
+app.get('/shop/:id/edit', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    res.render('shop/editItem', { product, Categories});
+})
+
+app.put('/shop/:id', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findByIdAndUpdate(id, req.body, { runValidators: true})
+    console.log(product)
+    res.redirect('/shop')
 })
