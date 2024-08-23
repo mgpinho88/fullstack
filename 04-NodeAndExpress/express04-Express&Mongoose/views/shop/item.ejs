@@ -1,7 +1,30 @@
 <%- include('../partials/header') %>
 <%- include('../partials/nav') %>
-
-    <%= product.name %>
+	
+<div class="card is-shadowless">
+	<div class="card-content">
+		<p class="title">
+			<%= product.name %>
+		</p>
+	</div>
+	
+	<div class="card-content">
+		<div class="content">
+			Price: $<%= product.price %> br
+			Category: <%= product.category %>
+		</div>
+	</div>
+	
+	<footer class="card-footer">
+		<form class="card-footer-item has-background-primary" action="/shop/<%=product._id%>/edit" method="GET">
+			<button class="button is-primary is-fullwidth">Edit</button>
+		</form>
+		
+		<form class="card-footer-item has-background-danger" action="/shop/<%=product._id%>?_method=DELETE" method="POST">
+			<button class="button is-danger is-fullwidth">Delete</button>
+		</form>
+	</footer>
+</div>
   
 <%- include('../partials/footer') %>
     
