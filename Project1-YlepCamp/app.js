@@ -4,8 +4,8 @@ import path from 'path';
 import mongoose from 'mongoose';
 import { fileURLToPath } from 'url';
 import methodOverride from 'method-override';
+import ejsmate from 'ejs-mate';
 import Campground from './models/campground.js';
-import campground from './models/campground.js';
 
 // Because we are making this a module the 'require()' for improrts does not work
 // Use the url and path from the imports above
@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const port = 3000;
 const app = express();
-const dbName = 'yelp-camp'
+const dbName = 'yelp-camp';
 
 // Create a connection to MongoDB
 mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`);
@@ -25,6 +25,7 @@ db.once("open", () => {
 });
 
 // Tell the express application to use EJS as the view engine
+app.engine('ejs', ejsmate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
