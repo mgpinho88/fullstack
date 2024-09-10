@@ -2,39 +2,69 @@
 <div class="row">
   <h1 class="text-center">New Campground</h1>
   <div class="col-6 offset-3">
-    <form action="/campgrounds" method="post">
+    <form class="needs-validation" action="/campgrounds" method="post" novalidate>
       
       <div class="mb-3">
         <label class="form-label" for="title">Title</label>
-        <input class="form-control" type="text" name="title" id="title">
-        <div class="form-text" id="basic-addon4">Campground</div>
+        <input class="form-control" type="text" name="title" id="title" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
       </div>
       
       <div class="mb-3">
         <label class="form-lable" for="location">Location</label>
-        <input class="form-control" type="text" name="location" id="location" placeholder="Location">
+        <input class="form-control" type="text" name="location" id="location" placeholder="Location" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
       </div>
       
       <div class="mb-3">
         <label class="form-lable" for="price">Price</label>
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input class="form-control" type="text" name="price" id="price" aria-label="Amount (to the nearest dollar)">
+          <input class="form-control" type="text" name="price" id="price" aria-label="Amount (to the nearest dollar)" required>
           <span class="input-group-text">.00</span>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
       </div>
 
       <div class="mb-3">
         <label class="form-lable" for="image">Image</label>
-        <input class="form-control" type="text" name="image" id="image" value="https://picsum.photos/400?random=<%= Math.random() %>"/>
+        <input class="form-control" type="text" name="image" id="image" value="https://picsum.photos/400?random=<%= Math.random() %>" required>
       </div>
 
       <div class="mb-3">
         <label class="form-lable" for="description">Description</label>
-        <input class="form-control" type="text" name="description" id="description">
+        <input class="form-control" type="text" name="description" id="description" required>
       </div>
 
       <button class="btn btn-primary" type="submit">Submit New Campground</button>
     </form>
   </div>
 </div>
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>

@@ -1,29 +1,27 @@
 <% layout('layouts/boilerplate') %>
-<div class="card align-self-center" style="max-width: 1440px">
-  <div class="row g-0">
+<div class="row my-3">
+  <div class="col-6 offset-3">
+    <div class="card">  
+      <img src="<%= camp.image %>" class="card-img-top img-fluid" alt="camp">
     
-    <div class="col-md-4">
-      <img src="<%= camp.image %>" class="card-img-top" alt="camp">
-    </div>
-    
-    <div class="col-md-8">
       <div class="card-body">
-      
         <h5 class="card-title"><%= camp.title %></h5>
-        <h6 class="card-sub-title">Location: <%= camp.location %></h6>
+        <h6 class="card-sub-title"><%= camp.location %></h6>
       
         <p class="card-text"><%= camp.description %> </p>
       </div>
-      
+    
       <div class="card-body">
-        <p class="card-text">$<%= camp.price %> a night</p>        
+        <p class="card-text">$<%= camp.price %>/night</p>
       </div>
-      
+    
       <div class="card-body mt-auto">
-        <span><a class="btn btn-info" href="/campgrounds/<%= camp._id %>/edit">Edit this campground</a></span>
-        <span><a class="btn btn-primary" href="/campgrounds">All Campgrounds</a></span>
-      </div>
+        <a class="card-link btn btn-info" href="/campgrounds/<%= camp._id %>/edit">Edit this campground</a>
       
+        <form class="d-inline" action="/campgrounds/<%= camp._id %>?_method=DELETE" method="post">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
     </div>  
   </div>
 </div>
