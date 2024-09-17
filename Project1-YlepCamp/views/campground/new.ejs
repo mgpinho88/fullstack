@@ -6,7 +6,7 @@
       
       <div class="mb-3">
         <label class="form-label" for="title">Title</label>
-        <input class="form-control" type="text" name="title" id="title" required>
+        <input class="form-control" type="text" name="campground[title]" id="title" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -14,7 +14,7 @@
       
       <div class="mb-3">
         <label class="form-lable" for="location">Location</label>
-        <input class="form-control" type="text" name="location" id="location" placeholder="Location" required>
+        <input class="form-control" type="text" name="campground[location]" id="location" placeholder="Location" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -24,7 +24,7 @@
         <label class="form-lable" for="price">Price</label>
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input class="form-control" type="text" name="price" id="price" aria-label="Amount (to the nearest dollar)" required>
+          <input class="form-control" type="text" name="campground[price]" id="price" aria-label="Amount (to the nearest dollar)" required>
           <span class="input-group-text">.00</span>
           <div class="valid-feedback">
             Looks good!
@@ -34,12 +34,12 @@
 
       <div class="mb-3">
         <label class="form-lable" for="image">Image</label>
-        <input class="form-control" type="text" name="image" id="image" value="https://picsum.photos/400?random=<%= Math.random() %>" required>
+        <input class="form-control" type="text" name="campground[image]" id="image" value="https://picsum.photos/400?random=<%= Math.random() %>" required>
       </div>
 
       <div class="mb-3">
         <label class="form-lable" for="description">Description</label>
-        <input class="form-control" type="text" name="description" id="description" required>
+        <input class="form-control" type="text" name="campground[description]" id="description" required>
       </div>
 
       <button class="btn btn-primary" type="submit">Submit New Campground</button>

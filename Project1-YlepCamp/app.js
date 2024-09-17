@@ -8,6 +8,8 @@ import ejsmate from 'ejs-mate';
 import Campground from './models/campground.js';
 import catchAsync from './utils/catchAsync.js';
 import ExpressError from './utils/ExpressError.js';
+import campground from './models/campground.js';
+import JoiSchema from './schema.js';
 
 // Because we are making this a module the 'require()' for improrts does not work
 // Use the url and path from the imports above
@@ -34,6 +36,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'));
 
+// Use Joi as middleware so there is less repetition in the code
+const validateCampground = (req, res, next) => {
+  // Validate the form for any fields that are required and thow an error if invalid submission
+  const { error } = JoiSchema.campgroundSchema.validate(req.body);
+  
+  if (error) {
+    const message = error.details.map(el => el.message).join(',');
+    throw new ExpressError(message, 400);
+  }
+
+  next();
+}
+
 // Create the base route for your home page
 app.get('/', (req, res) => {
   res.render('home')
@@ -53,9 +68,9 @@ app.get('/campgrounds/new', (req, res) => {
   res.render('campground/new');
 })
 
-app.post('/campgrounds', catchAsync( async (req, res, next) => {
+app.post('/campgrounds', validateCampground, catchAsync( async (req, res, next) => {
   console.log(req.body);
-  const camp = await Campground.create(req.body);
+  const camp = await Campground.create(req.body.campground);
   res.redirect(`campgrounds/${ camp._id }`);
 }))
 
@@ -73,7 +88,7 @@ app.get('/campgrounds/:id/edit', catchAsync( async (req, res) => {
   res.render('campground/edit', { camp })
 }))
 
-app.put('/campgrounds/:id', catchAsync( async(req, res) => {
+app.put('/campgrounds/:id', validateCampground, catchAsync( async(req, res) => {
   console.log(req.params.id)
   console.log(req.body)
   const camp = await Campground.findByIdAndUpdate(req.params.id, req.body);
@@ -91,8 +106,9 @@ app.all('*', (req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message = 'Something went wrong' } = err;
-  res.status(statusCode).send(message);
+  if(!err.statusCode) err.statusCode = 500;
+  if(!err.message) err.message = "Something went wrong.";
+  res.status(err.statusCode).render("error", { err });
 })
 
 app.listen(port, () => {

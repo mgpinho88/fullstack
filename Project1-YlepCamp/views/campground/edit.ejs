@@ -10,7 +10,7 @@
       
       <div class="mb-3">
         <label class="form-label" for="title">Title</label>
-        <input class="form-control" type="text" name="title" id="title" placeholder="<%= camp.title %>" required>
+        <input class="form-control" type="text" name="campground[title]" id="title" placeholder="<%= camp.title %>" required>
         <!-- This div will be visible when the form has an input (i.e. when user begins typing) -->
         <div class="valid-feedback">
           Looks good!
@@ -19,7 +19,7 @@
       
       <div class="mb-3">
         <label class="form-lable" for="location">Location</label>
-        <input class="form-control" type="text" name="location" id="location" placeholder="Location" required>
+        <input class="form-control" type="text" name="campground[location]" id="location" placeholder="Location" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -29,7 +29,7 @@
         <label class="form-lable" for="price">Price</label>
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input class="form-control" type="text" name="price" id="price" placeholder="<%= camp.price %>" aria-label="Amount (to the nearest dollar)" required>
+          <input class="form-control" type="text" name="campground[price]" id="price" placeholder="<%= camp.price %>" aria-label="Amount (to the nearest dollar)" required>
           <span class="input-group-text">.00</span>
           <div class="valid-feedback">
             Looks good!
@@ -39,7 +39,7 @@
 
       <div class="mb-3">
         <label class="form-lable" for="description">Description</label>
-        <input class="form-control" type="text" name="description" id="description" placeholder="<%= camp.description %>" required>
+        <input class="form-control" type="text" name="campground[description]" id="description" placeholder="<%= camp.description %>" required>
         <div class="valid-feedback">
           Looks good!
         </div>
